@@ -1,0 +1,12 @@
+#EXTM3U
+#EXT-X-VERSION:3
+#EXT-X-TARGETDURATION:13
+#EXT-X-MEDIA-SEQUENCE:1
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXTINF:12,
+translation_es.mp4file_00001.ts
+#EXTINF:12,
+translation_es.mp4file_00002.ts
+#EXTINF:10,
+translation_es.mp4file_00003.ts
+#EXT-X-ENDLIST

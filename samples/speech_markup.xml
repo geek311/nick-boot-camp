@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<speak>
+<break time="1.75s"/>
+ <prosody amazon:max-duration="0.37s">
+    Salut.
+ </prosody>
+ <break time="0.5s"/>
+
+ <prosody amazon:max-duration="1.18s">
+   Je m'appelle Nick Todd.
+ </prosody>
+ 
+
+ <prosody amazon:max-duration="2.49s">
+    Vous allez utiliser cette vidéo pour faire un court exercice
+ </prosody>
+ <break time="0.06s"/>
+ <prosody amazon:max-duration="2.26s">
+    où vous allez prendre le contenu de cette vidéo
+ </prosody>
+ <break time="0.14s"/>
+ <prosody amazon:max-duration="3.35s">
+    traduit dans une autre langue et doublage avec des sous-titres.
+ </prosody>
+ <break time="0.5s"/>
+ <prosody amazon:max-duration="1.57s">
+    Ces sous-titres seront en anglais,
+ </prosody>
+ <break time="0.01s"/>
+ <prosody amazon:max-duration="2.24s">
+   mais aussi dans une langue étrangère.
+ </prosody>
+ <break time="0.3s"/>
+ <prosody amazon:max-duration="5.85s">
+  Alors vous pouvez même remplacer ma voix par une voix artificielle parlant 
+  dans la langue étrangère,
+ </prosody>
+ <break time="0.01s"/>
+ <prosody amazon:max-duration="6.08s">
+  et vous verrez comment tout cela pourrait être fait en utilisant les différents services d'apprentissage automatique et d'intelligence artificielle Amazon.
+ </prosody>
+ <break time="0.06s"/>
+ <prosody amazon:max-duration="2.7s">
+  Donc bonne chance et profiter de l'exercice.
+ </prosody>
+</speak>
