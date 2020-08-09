@@ -19,7 +19,10 @@ The architecture is as follows:
 
 ![Architecture Diagram](/architecture.png)
 
+<<<<<<< HEAD
 ## 1. Upload the original file
+=======
+>>>>>>> d6e23af0c92c22f10d8dfbe09845b4022b5ea5cd
 To trigger the pipeline, copy a video file into a bucket called ai.conygre.com/uploads
 
 The Input file is named based on the original language 
@@ -29,16 +32,23 @@ eg.
 
 ```myvideo__en-US__es.mp4```
 
+<<<<<<< HEAD
 
 ## 2. Transcribe the Audio
+=======
+>>>>>>> d6e23af0c92c22f10d8dfbe09845b4022b5ea5cd
 This upload triggers the first Lambda called LambdaTranscribe which transcribes the video 
 and places a JSON output into a bucket called transcribe.json.conygre.com with the filename:
 
 ```timestamp```myvideo__en-US__es.json
 
+<<<<<<< HEAD
 ## 3. Create Subtitles Files In Both Languages
 
 This JSON which contains the transcribed text then needs to be converted into a subtitles file, and then translated.
+=======
+This JSON which contains the translated text then needs to be converted into a subtitles file, and then translated.
+>>>>>>> d6e23af0c92c22f10d8dfbe09845b4022b5ea5cd
 
 This is done by the second Lambda ConvertTranscribeToSubtitle.
 It creates two files:
@@ -49,8 +59,11 @@ It creates two files:
 
 These files are placed into the bucket transcribe.srt.conygre.com
 
+<<<<<<< HEAD
 ## 4. Create the Speech Markup Language Files
 
+=======
+>>>>>>> d6e23af0c92c22f10d8dfbe09845b4022b5ea5cd
 The SRT files need to be converted into SSML files. This is done by the third Lambda ConvertSubtitleToSSML. This creates file with the name:
 
 ```<timestamp>myvideo__en-US__es_translated.ssml```
@@ -59,14 +72,18 @@ Note that it is written to ignore files with the word 'original' in them since t
 
 The file is placed into the bucket transcribe.ssml.conygre.com
 
+<<<<<<< HEAD
 ## 5. Create the Audio File for the New Language
 
+=======
+>>>>>>> d6e23af0c92c22f10d8dfbe09845b4022b5ea5cd
 An audio file is then created based on the SSML file for the translated SSML.
 
 This is done by the fourth Lambda called SSMLToAudio. It takes the SSML and runs Amazon Polly to create an audio file. The audio file has the name
 
 ```<timestamp>myvideo__en-US__de_translated<pollyJobId>```
 
+<<<<<<< HEAD
 ## 6. Convert the output to be a new Playable Resource
 
 The fifth and final Lambda then runs to run a **MediaConvert** job using all the files created already.
@@ -74,3 +91,8 @@ The fifth and final Lambda then runs to run a **MediaConvert** job using all the
 ## Review your Results
 
 There is finally an HTML file called testmedia.html that can be used to display the finished media in a Web page. This can be edited for your final output.
+=======
+The fifth and final Lambda then runs to run a **MediaConvert** job using all the files created already.
+
+There is finally an HTML file called testmedia.html that can be used to display the finished media in a Web page.
+>>>>>>> d6e23af0c92c22f10d8dfbe09845b4022b5ea5cd
